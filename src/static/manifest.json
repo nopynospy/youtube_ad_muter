@@ -1,6 +1,6 @@
 {
-  "name": "React Extension",
-  "description": "Chrome Extension in React!",
+  "name": "Youtube Ad Muter",
+  "description": "Mutes ads while still supporting your favourite YouTubers",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "React Extension",
+    "default_title": "Youtube Ad Muter",
     "default_icon": "icon.png"
   },
   "permissions": ["storage"],
