@@ -13,7 +13,7 @@
     "default_title": "Youtube Ad Muter",
     "default_icon": "icon.png"
   },
-  "permissions": ["storage"],
+  "permissions": [],
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
