@@ -11,7 +11,8 @@ let observer = new MutationObserver(mutations => {
         if (mutation.target.nodeName === "DIV") {
            const element = <HTMLElement>mutation.target
            const classList = Array.from(element.classList)
-           if (classList.includes('ytp-ad-text')) {
+        //    console.log(classList)
+           if (classList.includes('ad-created')) {
                 // console.log("AD playing!!!!!!")
                 toggle_mute()
            }
