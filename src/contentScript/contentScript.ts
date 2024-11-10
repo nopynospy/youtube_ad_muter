@@ -1,8 +1,8 @@
 
-function toggle_mute() {
+function toggle_mute(toggle=true) {
     const videos = document.getElementsByTagName("video");
         for (let i = 0; i < videos.length; i++) {
-            videos[i].muted = true;
+            videos[i].muted = toggle;
         }
 }
 
@@ -13,9 +13,15 @@ let observer = new MutationObserver(mutations => {
            const classList = Array.from(element.classList)
         //    console.log(classList)
            if (classList.includes('ad-created')) {
-                // console.log("AD playing!!!!!!")
                 toggle_mute()
            }
+        }
+        for (const el of mutation.removedNodes) {
+            const element = <HTMLElement>mutation.target
+            const classList = Array.from(element.classList)
+            if (classList.includes('ad-created')) {
+                toggle_mute(false)
+            }
         }
      }
  });
